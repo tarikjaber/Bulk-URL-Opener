@@ -1,0 +1,20 @@
+- name: end
+  tabs:
+    - https://www.google.com/search?q=5+minute+timer
+    - https://mail.google.com/mail/u/0/#inbox
+    - https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=6be79abe-1711-909d-2753-12a3c9c1d0a5&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&domain_hint=buckeyemail.osu.edu&nonce=638135661959966463.073e41bd-e58a-46ae-a282-eb36b2de1a0f&state=DcvLDYAgEABR0CZsgu_CAuUssiZGjQdDjN3L4c1tpBBiHqZB2hGRELKDiOhKLAUxIGibgIOrTXHMpAISK_LZK66A1Td2ZDc53sXcL5na14M_vmg_9f10za3_
+    - https://osu.instructure.com/calendar#view_name=month
+    - https://elearn.sinclair.edu/d2l/le/calendar/307122
+    - https://todoist.com/app/project/2237489914
+    - https://todoist.com/app/project/2306331649
+    - https://calendar.google.com/calendar/u/0/r
+    - https://www.notion.so/tarikjaber/Daily-Plan-bb37f3849f35464b8cb15beff8f37831
+- name: fs
+  tabs:
+    - https://www.google.com/search?q=1+minute+timer
+    - https://calendar.google.com/calendar/u/0/r
+    - https://www.notion.so/tarikjaber/Daily-Plan-bb37f3849f35464b8cb15beff8f37831
+- name: plan
+  tabs:
+    - https://calendar.google.com/calendar/u/0/r
+    - https://www.notion.so/tarikjaber/Daily-Plan-bb37f3849f35464b8cb15beff8f37831
