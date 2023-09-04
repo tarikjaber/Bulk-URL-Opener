@@ -6,7 +6,7 @@
     "Author": "Tarik Jaber",
     "Version": "1.0.0",
     "Language": "python",
-    "Website": "https://google.com",
+    "Website": "https://github.com/tarikjaber/Bulk-URL-Opener",
     "IcoPath": "Images\\app.png",
     "ExecuteFileName": "main.py"
 }
