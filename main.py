@@ -24,6 +24,7 @@ class TabOpener(FlowLauncher):
 
         # Create a result item for each matching group
         # Create a result item for each matching group
+        # Create a result item for each matching group
         results = []
         for group in matching_groups:
             results.append({
