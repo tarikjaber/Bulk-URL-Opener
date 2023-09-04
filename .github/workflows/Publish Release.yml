@@ -9,6 +9,7 @@ on:
 
 jobs:
   publish:
+    permissions: write-all
     runs-on: ubuntu-latest
     env:
       python_ver: 3.9
