@@ -1,12 +1,41 @@
-- name: test
+- name: plan
   tabs:
-    - https://www.google.com
+    - https://www.google.com/search?q=15+minute+timer+google
+    - https://mail.google.com/mail/u/0/#inbox
+    - https://outlook.office.com/mail/
+    - https://todoist.com/app/project/2237489914
+    - https://osu.instructure.com/calendar#view_name=month
     - https://calendar.google.com/calendar/u/0/r
-    - https://www.google.com/search?q=1+minute+timer
-    - https://www.google.com/search?q=2+minute+timer
-    - https://www.google.com/search?q=3+minute+timer
-- name: second
+    - https://www.notion.so/tarikjaber/Daily-Plan-bb37f3849f35464b8cb15beff8f37831
+- name: boot
   tabs:
-    - https://www.google.com/search?q=1+minute+timer
-    - https://calendar.google.com/calendar/u/0/r
-    - https://calendar.google.com/calendar/u/0/r
+    - https://www.notion.so/tarikjaber/Bootup-9ec5a999a34f4d1fa57ac98bb76ba9f0
+    - https://www.chess.com/play/online/new?action=createLiveChallenge&base=300&timeIncrement=0
+- name: jobs
+  tabs:
+    - https://simplify.jobs/matches
+    - https://www.google.com/search?q=software+engineer+jobs+cincinnati&rlz=1C1RXQR_enUS1050US1050&oq=software+engineer+jobs+cincinnati&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMgoIAxAAGA8YFhgeMgoIBBAAGIYDGIoFMgoIBRAAGIYDGIoF0gEINDUwOWowajGoAgCwAgA&sourceid=chrome&ie=UTF-8&ibp=htl;jobs&sa=X&ved=2ahUKEwjv-biG2_qAAxV6l2oFHcyEB50QudcGKAF6BAgUECs&sxsrf=AB5stBgLl8zoRrKZNSRdQOUUyauRugViKg:1693066189495#htivrt=jobs&fpstate=tldetail&htichips=date_posted:month,employment_type:FULLTIME,job_family_1:software%20engineer,job_family_1:backend%20engineer,job_family_1:software%20engineering,job_family_1:programmer&htischips=date_posted;month,employment_type;FULLTIME,job_family_1;software%20engineer;backend%20engineer;software%20engineering;programmer&htidocid=EI0TbzXsR-UAAAAAAAAAAA%3D%3D
+    - https://www.linkedin.com/jobs/collections/recommended/?currentJobId=3650977305
+    - https://www.levels.fyi/jobs/title/software-engineer/location/united-states/level/entry?from=subnav&jobId=81823242823574214&postedAfter=2023-04-08T19%3A30%3A18.137Z&minMedianTotalCompensation=125000&postedAfterValue=14&postedAfterTimeType=days
+    - https://app.joinhandshake.com/stu/postings?page=1&per_page=25&sort_direction=desc&sort_column=default&employment_type_names%5B%5D=Full-Time&job.job_types%5B%5D=9
+    - https://github.com/coderQuad/New-Grad-Positions
+    - https://hnhiring.com/
+- name: tube
+  tabs:
+    - https://www.youtube.com/@AnastasiInTech/videos
+    - https://www.youtube.com/@Fireship/videos
+    - https://www.youtube.com/@beyondfireship/videos
+    - https://www.youtube.com/@ThePrimeTimeagen/videos
+    - https://www.youtube.com/@ThePrimeagen/videos
+    - https://www.youtube.com/user/YasirQadhi/videos
+- name: inbox
+  tabs:
+    - https://drive.google.com/drive/u/0/my-drive
+    - https://todoist.com/app/project/2237489914
+    - https://www.notion.so/tarikjaber/Dashboard-798545450bc4438cb3d04a20121e32a3
+- name: leet
+  tabs:
+    - https://youfiles.herokuapp.com/videodictionary/?m=Video_Player_Drive&state=%7B%22ids%22:%5B%221w5b49ucpi6AgIa9A5lDLFFrDgEQ_8Zvl%22%5D,%22action%22:%22open%22,%22resourceKeys%22:%7B%7D%7D
+    - https://www.techinterviewhandbook.org/grind75?weeks=6&hours=40
+    - https://tasktimer3.vercel.app/
+

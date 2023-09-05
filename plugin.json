@@ -4,7 +4,7 @@
     "Name": "Bulk URL Opener",
     "Description": "Opens groups of tabs",
     "Author": "Tarik Jaber",
-    "Version": "1.0.1",
+    "Version": "1.0.2",
     "Language": "python",
     "Website": "https://github.com/tarikjaber/Bulk-URL-Opener",
     "IcoPath": "Images\\app.png",
