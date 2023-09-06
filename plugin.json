@@ -4,7 +4,7 @@
     "Name": "Bulk URL Opener",
     "Description": "Opens groups of tabs. To edit the tab groups, edit the tab_groups.yaml file in the plugin directory.",
     "Author": "Tarik Jaber",
-    "Version": "1.0.2",
+    "Version": "1.0.3",
     "Language": "python",
     "Website": "https://github.com/tarikjaber/Bulk-URL-Opener",
     "IcoPath": "Images\\app.png",

@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import yaml
-import webbrowser
-from flowlauncher import FlowLauncher
 import sys
 import os
 from pathlib import Path
@@ -10,6 +7,10 @@ from pathlib import Path
 plugindir = Path.absolute(Path(__file__).parent)
 paths = (".", "lib", "plugin")
 sys.path = [str(plugindir / p) for p in paths] + sys.path
+
+import yaml
+import webbrowser
+from flowlauncher import FlowLauncher
 
 class TabOpener(FlowLauncher):
 
