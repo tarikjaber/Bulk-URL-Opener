@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import sys
 import os
 from pathlib import Path
@@ -23,8 +22,6 @@ class TabOpener(FlowLauncher):
         matching_groups = [
             group for group in tab_groups if query.lower() in group["name"].lower()]
 
-        # Create a result item for each matching group
-        # Create a result item for each matching group
         # Create a result item for each matching group
         results = []
         for group in matching_groups:

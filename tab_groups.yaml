@@ -1,5 +1,11 @@
-- name: test
+- name: demo
   tabs:
     - https://www.google.com
     - https://www.youtube.com
+- name: demo2
+  tabs:
+    - https://www.youtube.com
+    - https://www.google.com
+    - https://www.wikipedia.com
+    - https://www.github.com
 
