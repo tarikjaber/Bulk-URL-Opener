@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
+import subprocess
 from pathlib import Path
 
 plugindir = Path.absolute(Path(__file__).parent)
@@ -14,6 +15,8 @@ from flowlauncher import FlowLauncher
 class TabOpener(FlowLauncher):
 
     def query(self, query):
+        browser_name = self.rpc_request['settings']['default_browser']
+        open_tabs_in_new_window = self.rpc_request['settings']['open_tabs_in_new_window']
         # Load the YAML file containing the tab groups
         with open("tab_groups.yaml", "r") as f:
             tab_groups = yaml.safe_load(f)
@@ -24,16 +27,29 @@ class TabOpener(FlowLauncher):
 
         # Create a result item for each matching group
         results = []
+
         for group in matching_groups:
-            results.append({
-                "Title": group["name"],
-                "SubTitle": "Open tabs",
-                "IcoPath": "Images/app.png",
-                "JsonRPCAction": {
-                    "method": "open_tabs",
-                    "parameters": [[tab for tab in group["tabs"]]]
-                }
-            })
+            if open_tabs_in_new_window:
+                results.append({
+                    "Title": group["name"],
+                    "SubTitle": "Open tabs",
+                    "IcoPath": "Images/app.png",
+                    "JsonRPCAction": {
+                        "method": "open_tabs_new_window",
+                        "parameters": [group["tabs"], browser_name]
+                    }
+                })
+            else:
+                results.append({
+                    "Title": group["name"],
+                    "SubTitle": "Open tabs",
+                    "IcoPath": "Images/app.png",
+                    "JsonRPCAction": {
+                        "method": "open_tabs",
+                        "parameters": [group["tabs"]],
+                    }
+                })
+
 
         return results
 
@@ -42,6 +58,10 @@ class TabOpener(FlowLauncher):
         for tab in tabs:
             webbrowser.open(tab)
 
+    def open_tabs_new_window(self, tabs, browser_name):
+        subprocess.run(['start', browser_name, '/new-window', tabs[0]], shell=True)
+        for tab in tabs[1:]:
+            subprocess.run(['start', browser_name, "/new-tab", tab], shell=True)
 
 if __name__ == "__main__":
     TabOpener()

@@ -1,0 +1,13 @@
+body:
+  - type: checkbox
+    attributes:
+      name: open_tabs_in_new_window
+      label: "Open tabs in new window"
+      defaultValue: "false"
+      description: "Opens tabs in a new window. Else open tabs in a currently opened window (or create a new window if none are open)."
+  - type: input
+    attributes:
+      name: default_browser
+      label: "Set default browser"
+      defaultValue: "chrome"
+      description: "Type the name of the browser you want to use"
