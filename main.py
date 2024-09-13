@@ -17,6 +17,7 @@ class TabOpener(FlowLauncher):
     def query(self, query):
         browser_name = self.rpc_request['settings']['default_browser']
         open_tabs_in_new_window = self.rpc_request['settings']['open_tabs_in_new_window']
+        
         # Load the YAML file containing the tab groups
         with open("tab_groups.yaml", "r") as f:
             tab_groups = yaml.safe_load(f)
