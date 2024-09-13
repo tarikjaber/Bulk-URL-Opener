@@ -8,4 +8,11 @@
     - https://www.google.com
     - https://www.wikipedia.com
     - https://www.github.com
+- name: demo3
+  query: test
+  tabs:
+    - https://www.youtube.com/results?search_query=%s
+    - https://www.google.com/search?q=%s
+    - https://www.wikipedia.com
+    - https://www.github.com
 

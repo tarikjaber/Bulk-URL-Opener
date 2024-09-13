@@ -9,5 +9,5 @@ body:
     attributes:
       name: default_browser
       label: "Set default browser"
-      defaultValue: "chrome"
+      defaultValue: "msedge"
       description: "Type the name of the browser you want to use"

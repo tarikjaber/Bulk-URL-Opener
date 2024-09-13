@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import sys
-import os
 import subprocess
 from pathlib import Path
 
@@ -30,6 +29,9 @@ class TabOpener(FlowLauncher):
         results = []
 
         for group in matching_groups:
+            tabs = group["tabs"]
+            query = group.get("query", "")
+
             if open_tabs_in_new_window:
                 results.append({
                     "Title": group["name"],
@@ -37,7 +39,7 @@ class TabOpener(FlowLauncher):
                     "IcoPath": "Images/app.png",
                     "JsonRPCAction": {
                         "method": "open_tabs_new_window",
-                        "parameters": [group["tabs"], browser_name]
+                        "parameters": [tabs, browser_name, query]
                     }
                 })
             else:
@@ -47,22 +49,25 @@ class TabOpener(FlowLauncher):
                     "IcoPath": "Images/app.png",
                     "JsonRPCAction": {
                         "method": "open_tabs",
-                        "parameters": [group["tabs"]],
+                        "parameters": [tabs, query],
                     }
                 })
 
-
         return results
 
-    def open_tabs(self, tabs):
+    def open_tabs(self, tabs, query):
         # Open the specified tabs in the default web browser
         for tab in tabs:
-            webbrowser.open(tab)
+            query_tab = tab.replace("%s", query)
+            webbrowser.open(query_tab)
 
-    def open_tabs_new_window(self, tabs, browser_name):
-        subprocess.run(['start', browser_name, '/new-window', tabs[0]], shell=True)
+    def open_tabs_new_window(self, tabs, browser_name, query):
+        first_tab = tabs[0].replace("%s", query)
+        subprocess.run(['start', browser_name, '/new-window', first_tab], shell=True)
+
         for tab in tabs[1:]:
-            subprocess.run(['start', browser_name, "/new-tab", tab], shell=True)
+            query_tab = tab.replace("%s", query)
+            subprocess.run(['start', browser_name, "/new-tab", query_tab], shell=True)
 
 if __name__ == "__main__":
     TabOpener()
