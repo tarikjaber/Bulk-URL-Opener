@@ -2,8 +2,6 @@
 import sys
 import subprocess
 from pathlib import Path
-import logging
-from os.path import expanduser
 
 plugindir = Path.absolute(Path(__file__).parent)
 paths = (".", "lib", "plugin")
@@ -17,11 +15,6 @@ class TabOpener(FlowLauncher):
     def query(self, query):
         browser_name = self.rpc_request['settings']['default_browser']
         open_tabs_in_new_window = self.rpc_request['settings']['open_tabs_in_new_window']
-        
-        logger = logging.getLogger()
-        home = expanduser("~")
-        logging.basicConfig(filename=home + '\\bulk.log', encoding='utf-8', level=logging.DEBUG)
-
         parts = query.split(" ")
 
         group_entered = parts[0]
