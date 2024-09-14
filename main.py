@@ -23,20 +23,10 @@ class TabOpener(FlowLauncher):
         logging.basicConfig(filename=home + '\\bulk.log', encoding='utf-8', level=logging.DEBUG)
 
         parts = query.split(" ")
-        logger.debug('parts:' + str(parts))
-        logger.debug(f"query: '{query}'")
 
         group_entered = parts[0]
         search_query = " ".join(parts[1:])
 
-        logger.debug('self:' + str(vars(self)))
-        logger.debug('browser:' + browser_name)
-
-        logger.debug('open_tabs:' + str(open_tabs_in_new_window))
-        logger.debug('open_tabs type:' + str(type(open_tabs_in_new_window)))
-        logger.debug('open_tabs == False:' + str(open_tabs_in_new_window == False))
-        logger.debug('open_tabs == True:' + str(open_tabs_in_new_window == True))
-        
         # Load the YAML file containing the tab groups
         with open("tab_groups.yaml", "r") as f:
             tab_groups = yaml.safe_load(f)
