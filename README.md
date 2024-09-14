@@ -25,8 +25,8 @@ For example, if you wanted to add a group called `demo2`, then you could add the
 You can also open URLs with search queries. Just add `%s` in a URL where you want a search query 
 to be inserted. If you type `bu demo3 hello world` in the flow box then `%s` will be replaced with "hello world".
 
-You can have a "default" search by adding `query: <default search>` to a tab group. For example in `demo3` below
-all sites with `%s` will be replaced with "test" if the search query is empty. 
+You can have a "default" search by adding `query: <default search>` key-value pair to a tab group. For example, in `demo3` below
+all sites with `%s` will be replaced with "test" if the search query entered in the flow box is empty. 
 
 ```yaml
 - name: demo3
