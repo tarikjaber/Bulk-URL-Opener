@@ -2,6 +2,8 @@
 import sys
 import subprocess
 from pathlib import Path
+import logging
+from os.path import expanduser
 
 plugindir = Path.absolute(Path(__file__).parent)
 paths = (".", "lib", "plugin")
@@ -12,10 +14,28 @@ import webbrowser
 from flowlauncher import FlowLauncher
 
 class TabOpener(FlowLauncher):
-
     def query(self, query):
         browser_name = self.rpc_request['settings']['default_browser']
         open_tabs_in_new_window = self.rpc_request['settings']['open_tabs_in_new_window']
+        
+        logger = logging.getLogger()
+        home = expanduser("~")
+        logging.basicConfig(filename=home + '\\bulk.log', encoding='utf-8', level=logging.DEBUG)
+
+        parts = query.split(" ")
+        logger.debug('parts:' + str(parts))
+        logger.debug(f"query: '{query}'")
+
+        group_entered = parts[0]
+        search_query = " ".join(parts[1:])
+
+        logger.debug('self:' + str(vars(self)))
+        logger.debug('browser:' + browser_name)
+
+        logger.debug('open_tabs:' + str(open_tabs_in_new_window))
+        logger.debug('open_tabs type:' + str(type(open_tabs_in_new_window)))
+        logger.debug('open_tabs == False:' + str(open_tabs_in_new_window == False))
+        logger.debug('open_tabs == True:' + str(open_tabs_in_new_window == True))
         
         # Load the YAML file containing the tab groups
         with open("tab_groups.yaml", "r") as f:
@@ -23,18 +43,22 @@ class TabOpener(FlowLauncher):
 
         # Filter the tab groups based on the user's query
         matching_groups = [
-            group for group in tab_groups if query.lower() in group["name"].lower()]
+            group for group in tab_groups if group_entered.lower() in group["name"].lower()]
 
         # Create a result item for each matching group
         results = []
 
         for group in matching_groups:
             tabs = group["tabs"]
-            query = group.get("query", "")
+            group_name = group["name"]
+            query_in_config = group.get("query", "")
+
+            query = search_query if search_query else query_in_config
+            title = f"{group_name} with '{query}'" if query else group_name
 
             if open_tabs_in_new_window:
                 results.append({
-                    "Title": group["name"],
+                    "Title": title,
                     "SubTitle": "Open tabs",
                     "IcoPath": "Images/app.png",
                     "JsonRPCAction": {
@@ -44,7 +68,7 @@ class TabOpener(FlowLauncher):
                 })
             else:
                 results.append({
-                    "Title": group["name"],
+                    "Title": title,
                     "SubTitle": "Open tabs",
                     "IcoPath": "Images/app.png",
                     "JsonRPCAction": {
