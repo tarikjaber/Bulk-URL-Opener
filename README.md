@@ -26,8 +26,7 @@ You can also open URLs with search queries. Just add `%s` in a URL where you wan
 to be inserted. If you type `bu demo3 hello world` in the flow box then `%s` will be replaced with "hello world".
 
 **Default Search Queries**: You can have a "default" search by adding a `query: <default search>` key-value pair to a tab group. 
-For example, in the group `demo3` below, all sites with `%s` will be replaced with "test" if the search query 
-entered in the flow box is empty. 
+For example, in the group `demo3` below, all sites with `%s` will be replaced with "test" if no search term is provided.
 
 ```yaml
 - name: demo3
