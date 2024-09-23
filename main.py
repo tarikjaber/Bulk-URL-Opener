@@ -21,7 +21,7 @@ class TabOpener(FlowLauncher):
         search_query = " ".join(parts[1:])
 
         # Load the YAML file containing the tab groups
-        with open("tab_groups.yaml", "r") as f:
+        with open("..\\..\\Settings\\tab_groups.yaml", "r") as f:
             tab_groups = yaml.safe_load(f)
 
         # Filter the tab groups based on the user's query
@@ -39,7 +39,7 @@ class TabOpener(FlowLauncher):
             query = search_query if search_query else query_in_config
             title = f"{group_name} with '{query}'" if query else group_name
 
-            if open_tabs_in_new_window:
+            if open_tabs_in_new_window == True:
                 results.append({
                     "Title": title,
                     "SubTitle": "Open tabs",
