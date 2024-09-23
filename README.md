@@ -6,9 +6,7 @@ This plugin allows you to open multiple URLs at once. It reads groups of tabs fr
 In portable mode, open the userdata folder by searching "userdata" in Flow Launcher. Then create
 `tab_groups.yaml` in the Settings folder.
 
-An example group called `demo` is provided in the file. You can add as many groups as you want.
-
-**Adding Groups**: To add another group `demo2`, add the following to `tab_groups.yaml`:
+**Example**: This file contains 2 groups - `demo` and `demo2`.
 
 ```yaml
 - name: demo
