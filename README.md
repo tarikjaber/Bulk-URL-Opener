@@ -1,7 +1,10 @@
 ## Bulk URL Opener
-This plugin allows you to open multiple URLs at once. It reads groups of tabs from `tab_groups.yaml`
-in the Plugin Directory. Access the directory by expanding the accordion for the plugin and clicking 
-on the folder icon in the bottom right.
+This plugin allows you to open multiple URLs at once. It reads groups of tabs from `tab_groups.yaml`at:
+```
+%APPDATA%\FlowLauncher\Settings\tab_groups.yaml
+```
+In portable mode, open the userdata folder by searching "userdata" in Flow Launcher. Then create
+`tab_groups.yaml` in the Settings folder.
 
 An example group called `demo` is provided in the file. You can add as many groups as you want.
 
